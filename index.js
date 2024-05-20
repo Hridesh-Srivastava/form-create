@@ -13,7 +13,8 @@ const port = process.env.PORT || 3000;
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Database', {
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Database', {
+mongoose.connect(process.env.MONGODB_URI, {
     serverSelectionTimeoutMS: 5000
 }).then(() => {
     console.log('MongoDB Connected');
