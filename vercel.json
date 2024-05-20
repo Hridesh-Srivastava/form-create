@@ -1,5 +1,17 @@
 {
-    "rewrites":[
-        {"source":"/(.*)","destination":"/"}
-    ]
+  "version": 2,
+  "name": "node-js",
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "regions": ["sfo1"]
 }
