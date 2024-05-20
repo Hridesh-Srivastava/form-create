@@ -29,7 +29,7 @@ h2{
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body {
-background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_Wallpaper.jpg/2560px-Black_Wallpaper.jpg");
+background:rgb(17, 17, 17);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
