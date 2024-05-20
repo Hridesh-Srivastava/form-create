@@ -1,0 +1,88 @@
+
+.main {
+   
+    padding: 50px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+   margin: 50px auto;
+   max-width: 500px;
+   
+   border-radius: 9px;
+   margin-top: 10px;
+   margin-left: 350px;
+   margin-right: 100px;
+   margin-bottom: 5px;
+   display:inline-block; 
+    box-shadow: 0 0 20px rgba(10, 158, 231, 0.892);
+}
+
+h2{
+   color:rgba(6, 121, 235, 0.856)
+}
+
+.main h2 {
+   font-size: 36px;
+   text-align: center;
+   color: #91d4f5;
+   margin-bottom: 30px;
+   text-shadow: 0 0px 12px rgba(15, 174, 232, 0.966);
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_Wallpaper.jpg/2560px-Black_Wallpaper.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+input {
+   width: calc(100% - 10px);
+   font-size: 18px;
+   color:rgb(248, 222, 222);
+   padding: 15px;
+   margin: 10px 0;
+   border:none;
+    background:transparent; 
+  border-bottom: 0.1px solid rgb(52, 215, 252);
+   /* box-shadow: 0 0px 5px rgba(53, 189, 238, 0.848),inset 0px 0px 5px rgba(53, 189, 238, 0.848); */
+   /* transition: background-color 0.3s, box-shadow 0.3s; */
+}
+
+input[type=submit] {
+   background-color: #2e76bb;
+   color: white;
+   padding: 20px;
+   margin: 20px 0;
+   border-radius: 14px;
+   cursor: pointer;
+   box-shadow: 0 0px 10px rgba(53, 189, 238, 0.848),inset 0px 0px 10px rgba(53, 189, 238, 0.848);
+   transition: background-color 0.3s;
+}
+
+input:focus {
+   outline: none;
+   background:rgb(196, 188, 188);
+}
+
+input[type=submit]:hover {
+   background-color: #0c2b74;
+}
+
+@keyframes slideInFromLeft {
+   0% {
+       transform: translateX(-50%);
+       opacity: 0;
+   }
+   100% {
+       transform: translateX(0);
+       opacity: 1;
+   }
+}
+
+.main {
+   animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+input[type=text]{
+   color:whitesmoke;
+}

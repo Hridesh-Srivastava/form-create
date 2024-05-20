@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="registration-form-4948978-4114665.webp">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <style>
+        p{
+            color:#e9ebf0;
+        }
+        p.foot {
+            color: rgb(199, 211, 211);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin-left:30px;
+        }
+        input[type="radio"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 22px; 
+            height: 22px; 
+            border: 2px solid #129dee;
+            border-radius: 50%;
+            outline: none;
+            margin-left: 15px;
+            margin-bottom: -4px;
+            box-shadow: 0px 0px 6px rgb(71, 160, 255);
+            margin-right: 11px; 
+        }
+        input[type="radio"]:checked {
+            background-color: #e4e6e3;
+        }
+        input[type="radio"]::before {
+            content: '';
+            display: block;
+            width: 20px; 
+            height: 20px; 
+            margin: -0.3px -0.3px -0.3px -0.3px;
+            border-radius: 68%;
+        }
+        input[type="radio"]:checked::before {
+            background-color: #2961da;
+        }
+        a {
+            color: rgb(197, 184, 184);
+            font-weight: normal;
+            font-size: large;
+            padding-left: 10px; 
+        }
+        .signin-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        a[href="/sign_in"]{
+            color:rgb(38, 221, 221);
+            margin-left:-6px;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-mod-3"></div>
+            <div class="col-md-6 main">
+                <form action="/sign_up" method="POST">
+                    <h2>Sign Up</h2>
+                    <input type="text" class="box" id="name" name="name" placeholder="Username" required />
+                    <br>
+                    <input type="text" class="box" id="age" name="age" placeholder="Age" required />
+                    <br>
+                    <input type="text" class="box" id="email" name="email" placeholder="Email" required />
+                    <br>
+                    <input type="text" class="box" id="phno" name="phno" placeholder="Phone" required />
+                    <br>
+                    <br>
+                    <div>
+                        <label>
+                            <input type="radio" name="gender" value="male" required /><a>Male</a>
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" required /><a>Female</a>
+                        </label>
+                    </div>
+                    <input type="password" class="box" id="password" name="password" placeholder="Password" required />
+                    <br>
+                    <input type="password" class="box" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required />
+                    <br>
+                    <input type="submit" value="Create Account" id="submit" />
+                </form>
+                <div class="signin-container">
+                    <p>Already have an account?<a style="text-shadow: 0 0px 12px rgba(15, 174, 232, 0.966);" href="/sign_in"> Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <p class="foot">&copy; Register form. All rights reserved.</p>
+    </footer>
+</body>
+</html>

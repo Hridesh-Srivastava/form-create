@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="registration-form-4948978-4114665.webp">
+</head>
+<body>
+    <style>
+        .container{
+            margin-top:100px;
+            margin-bottom: 60px;
+        }
+        p{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            display:block;
+            color:rgb(210, 210, 202);
+        }
+        body,html{
+            background: black;
+        }
+        h2{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-mod-3"></div>
+            <div class="col-md-6 main">
+                <form action="/sign_in" method="POST">
+                    <h2>Sign In</h2>
+                    <input type="text" class="box" id="email" name="email" placeholder="Email" required />
+                    <br>
+                    <input type="password" class="box" id="password" name="password" placeholder="Password" required />
+                    <br>
+                    <input type="submit" value="Sign In" id="submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<br>
+<br>
+<footer>
+    <p>&copy; Sign In form. All rights reserved. </p>
+</footer>
+</html>
