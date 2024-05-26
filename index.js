@@ -7,7 +7,12 @@ const path = require("path");
 
 const app = express();
 const cors=require("cors");
-
+const corsConfig={
+    origin:"*",
+    credential:true,
+    methods:["GET","POST","PUT","DELETE"],
+};
+app.options("",cors(corsConfig));
 dotenv.config();
 const port = process.env.PORT || 3000;
 
@@ -27,7 +32,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors());
+app.use(cors(corsConfig));
 
 
 const User = mongoose.model('User', {
