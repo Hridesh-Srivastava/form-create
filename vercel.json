@@ -10,8 +10,8 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/",
-      "methods":["GET","POST","PUT","PATCH","DELETE","OPTIONS"]
+      "dest": "/"
+     
     }
   ],
   "regions": ["sfo1"]
