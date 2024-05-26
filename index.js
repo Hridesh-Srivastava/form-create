@@ -9,7 +9,12 @@ const app = express();
 
 
 const cors=require("cors");
-app.use(cors());
+const corsConfig={
+    origin:"*",
+   credential:true,
+   methods:["GET","POST","PUT","DELETE"],
+};
+app.use(cors(corsConfig));
 
 dotenv.config();
 const port = process.env.PORT || 3000;
