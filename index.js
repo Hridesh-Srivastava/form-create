@@ -14,7 +14,11 @@ const corsConfig={
    credential:true,
    methods:["GET","POST","PUT","DELETE"],
 };
+app.options("",cors(corsConfig));
 app.use(cors(corsConfig));
+
+
+
 
 dotenv.config();
 const port = process.env.PORT || 3000;
