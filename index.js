@@ -33,7 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(cors(corsConfig));
-app.use(cors(corsConfig));
+app.use(cors());
 
 
 const User = mongoose.model('User', {
