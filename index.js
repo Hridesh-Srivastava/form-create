@@ -38,6 +38,14 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//-->
+app.use(express.static(path.join(__dirname, 'public')));
+
+//-->
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+});
 
 
 const User = mongoose.model('User', {
@@ -91,9 +99,17 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get("/signup_successful.html", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'signup_successful.html'));
+//-->
+app.get('/signup_successful.html', (req, res, next) => {
+    res.sendFile(path.join(__dirname, 'public', 'signup_successful.html'), (err) => {
+        if (err) {
+            next(err); // Pass errors to the Express error handler
+        }
+    });
 });
+
+
+
 
 app.get("/signin_successful.html", (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'signin_successful.html'));
