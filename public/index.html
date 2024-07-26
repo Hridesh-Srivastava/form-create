@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +12,7 @@
     <style>
         .container{
             display: block !important;
-            
             margin-right: auto !important;
-            /*width:85% !important;*/
             width:78% !important;
         }
         p{
@@ -66,7 +63,7 @@
         }
         #passw1,#passw2 {
             position: absolute;
-            right: 2em;
+            right: 54px;
             cursor: pointer;
             color:rgb(122, 112, 112);
         }
@@ -75,6 +72,11 @@
             position: relative;
             display: flex;
             align-items: center;
+        }
+
+        .box {
+            width: calc(100% - 50px); 
+            padding-right: 50px;
         }
     </style>
     <div class="container">
@@ -152,5 +154,3 @@ document.getElementById('passw2').addEventListener('click',()=>{
     </script>
 </body>
 </html>
- 
-
