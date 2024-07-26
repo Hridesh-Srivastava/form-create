@@ -65,7 +65,7 @@
         }
         #passw1,#passw2 {
             position: absolute;
-            right: 2em;
+            right:55px;
             cursor: pointer;
             color:rgb(122, 112, 112);
         }
@@ -74,6 +74,10 @@
             position: relative;
             display: flex;
             align-items: center;
+        }
+        .box{
+            width: calc(100% - 50px);
+            padding-right: 50px;
         }
     </style>
     <div class="container">
@@ -100,7 +104,7 @@
                         </label>
                     </div>
                     <div class="cont2">
-                    <input type="password" class="box" id="password" name="password" placeholder="Password......." required />
+                    <input type="password" class="box" id="password" name="password" placeholder="Password" required />
                     <span id="passw1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
