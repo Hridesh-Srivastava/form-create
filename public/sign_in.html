@@ -27,6 +27,19 @@
         h2{
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
+
+        #eye1 {
+            position: absolute;
+            right: 2em;
+            cursor: pointer;
+            color:rgb(122, 112, 112);
+        }
+        
+        .cont1 {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
     </style>
     <div class="container">
         <div class="row">
@@ -36,13 +49,33 @@
                     <h2>Sign In</h2>
                     <input type="text" class="box" id="email" name="email" placeholder="Email" required />
                     <br>
-                    <input type="password" class="box" id="password" name="password" placeholder="Password" required />
+                    <div class="cont1">
+                    <input type="password" class="box" id="password" name="password" placeholder="Password...." required />
+                    <span id="eye1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </span>
+                    </div>
                     <br>
                     <input type="submit" value="Sign In" id="submit" />
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        const passSet=document.getElementById('password');
+document.getElementById('eye1').addEventListener('click',()=>{
+    if(passSet.type==='password'){
+        passSet.type='text';
+    }
+    else{
+        passSet.type='password';
+    }
+});
+    </script>
+    
 </body>
 <br>
 <br>
