@@ -1,3 +1,4 @@
+
 {
   "version": 2,
   "name": "node-js",
@@ -5,6 +6,10 @@
     {
       "src": "./index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -13,5 +18,12 @@
       "dest": "/"
     }
   ],
-  "regions": ["sfo1"]
+  "regions": ["sfo1"],
+  "cache": {
+    "headers": {
+      "/*": {
+        "cache-control": "max-age=0, must-revalidate"
+      }
+    }
+  }
 }
